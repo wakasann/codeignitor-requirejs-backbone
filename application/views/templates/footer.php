@@ -1,4 +1,5 @@
-<? /* 
+</div>
+<?php /* 
 	// Analytics - uncomment and put in our #
 	<script>
 	    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
@@ -7,5 +8,6 @@
 	    s.parentNode.insertBefore(g,s)}(document,'script'));
 	</script>
 */ ?>
-
+<script src="<?=base_url();?>js/libs/require.js"></script>
+<script src="<?=base_url();?>js/main.js"></script>
 </body>

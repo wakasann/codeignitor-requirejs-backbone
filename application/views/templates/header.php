@@ -10,20 +10,20 @@
 	<meta name="description" content="<?= (isset($meta_description)) ? $meta_description : 'Your Default Meta Desciption' ; ?>" />
 	<meta name="viewport" content="width=device-width">
 
-	<? if (!empty($site_css)) : ?>
-		<? foreach ($site_css as $css) : ?>
+	<?php if (!empty($site_css)) : ?>
+		<?php foreach ($site_css as $css) : ?>
 			<link rel="stylesheet" type="text/css" href="<?=base_url() . $css;?>" />
-		<? endforeach; ?>
-	<? endif; ?>
+		<?php endforeach; ?>
+	<?php endif; ?>
 
-	<? if (!empty($site_js)) : ?>
-		<? foreach ($site_js as $js) : ?>
+	<?php if (!empty($site_js)) : ?>
+		<?php foreach ($site_js as $js) : ?>
 		    <script type="text/javascript" src="<?=base_url() . $js;?>"></script>
-		<? endforeach; ?>
-	<? endif; ?>
+		<?php endforeach; ?>
+	<?php endif; ?>
 
-    <? // RequireJS to handle js dependencies and client-side scripting ?>
-    <script data-main="/js/main" src="<?=base_url();?>js/libs/require.js"></script>
+    <?php // RequireJS to handle js dependencies and client-side scripting ?>
+    
     <link rel="icon" href="favicon.ico">
 </head>
 
@@ -31,3 +31,4 @@
 <!--[if lt IE 7]>
 	<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
+<div ng-view>

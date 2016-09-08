@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 
 	/** 
 	  * RequireJS config and shim
@@ -9,13 +9,14 @@
       *
 	  */
 
-requirejs.
+require.
 	config({
+		baseUrl: "./js",
 		// enforceDefine to catch load failures in IE
 		// @see http://requirejs.org/docs/api.html#ieloadfail
 		// @see http://requirejs.org/docs/api.html#config-enforceDefine
 		// See below for load require() | define() comment with this option
-    	enforceDefine: true,
+    	//enforceDefine: true,
 
     	// @see http://requirejs.org/docs/api.html#pathsfallbacks
 		// If the CDN location fails, load from local location
@@ -26,39 +27,66 @@ requirejs.
 					'libs/jquery.min'],
 		'jquery-ui': [//'http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min',
 					'libs/jquery-ui.min'],
-		'backbone': [//'http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.10/backbone-min',
-					'libs/backbone'],
+		// 'backbone': [//'http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.10/backbone-min',
+		// 			'libs/backbone'],
+		'angular': 'angular/angular.min',
+		'angular-route': 'angular/angular-route.min',
+    'angular-animate': 'angular/angular-animate.min',
+    'angular-touch': 'angular/angular-touch.min',
+    'ui-bootstrap': 'libs/ui-bootstrap-tpls-2.1.3.min',
+		"angular-loader": "angular/angular-async-loader",
 		'underscore': [//'http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.3/underscore-min',
 					'libs/underscore'],
-		'hogan': 'libs/hogan'
+		// 'hogan': 'libs/hogan'
+		"angular-dragula": "angular/angular-dragula.min",
 	},
 	// @see http://requirejs.org/docs/api.html#config-shim
 	shim: {
-		'jquery': {
-			exports: '$'
-		},
 		'jquery-ui': {
 			deps: ['jquery'],
-			exports: '$.ui',
 		},
+		angular: {
+      exports: 'angular',
+      deps: ["jquery-ui"]
+	  },
+	  "angular-route": {
+        deps: ["angular"]
+    },
+    "angular-animate": {
+        deps: ["angular"],
+        exports: 'angular-animate',
+    },
+     "angular-touch": {
+        deps: ["angular"],
+        exports: 'angular-touch',
+    },
+    "ui-bootstrap": {
+        deps: ["angular","angular-animate","angular-touch"]
+    },
+	  'app.router': {
+      deps: ["angular"]
+    },
 		'underscore': {
 			exports: '_'
-		},
-		'backbone': {
-			deps: ['jquery', 'underscore'],
-			exports: 'Backbone'
-		},
-		'hogan' : {
-			exports: 'Hogan'
 		}
-	}
-});
-
+		// 'backbone': {
+		// 	deps: ['jquery', 'underscore'],
+		// 	exports: 'Backbone'
+		// },
+		// 'hogan' : {
+		// 	exports: 'Hogan'
+		// }
+	},
+    waitSeconds: 0,
+    urlArgs: "v1.0"
+}),
  // DEV NOTE: If you do set enforceDefine: true, and you use data-main="" to load your main JS module,
  // then that main JS module must call define() instead of require() to load the code it needs.
  // The main JS module can still call require/requirejs to set config values,
  // but for loading modules it should use define().
-
-define(['module/Example'], function(Example) {
-	Example.init();
+require(["jquery", "jquery-ui", "angular","app.router"], function() {
+   //angular.module('ezdiyApp', []);
+    angular.element(document).ready(function() {
+      angular.bootstrap(document, ['ezdiyApp']);
+    });
 });

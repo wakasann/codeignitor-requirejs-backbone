@@ -7,6 +7,13 @@
 
 class General extends MY_Controller
 {
+
+
+	public function __construct(){
+		parent::__construct();
+		//$this->layout ='main';
+	}
+
 	/**
 	 * Site Default Landing Page.
 	 *
