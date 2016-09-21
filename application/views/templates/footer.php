@@ -1,4 +1,4 @@
-</div>
+
 <?php /* 
 	// Analytics - uncomment and put in our #
 	<script>
@@ -9,5 +9,5 @@
 	</script>
 */ ?>
 <script src="<?=base_url();?>js/libs/require.js"></script>
-<script src="<?=base_url();?>js/main.js"></script>
+<script src="<?=base_url();?>js/bootstrap.js"></script>
 </body>

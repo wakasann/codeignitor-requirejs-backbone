@@ -36,7 +36,7 @@ require.
     'ui-bootstrap': 'libs/ui-bootstrap-tpls-2.1.3.min',
 		"angular-loader": "angular/angular-async-loader",
 		'underscore': [//'http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.3/underscore-min',
-					'libs/underscore'],
+					'underscore-min'],
 		// 'hogan': 'libs/hogan'
 		"angular-dragula": "angular/angular-dragula.min",
 	},
@@ -49,26 +49,9 @@ require.
       exports: 'angular',
       deps: ["jquery-ui"]
 	  },
-	  "angular-route": {
-        deps: ["angular"]
-    },
-    "angular-animate": {
-        deps: ["angular"],
-        exports: 'angular-animate',
-    },
-     "angular-touch": {
-        deps: ["angular"],
-        exports: 'angular-touch',
-    },
-    "ui-bootstrap": {
-        deps: ["angular","angular-animate","angular-touch"]
-    },
 	  'app.router': {
       deps: ["angular"]
     },
-		'underscore': {
-			exports: '_'
-		}
 		// 'backbone': {
 		// 	deps: ['jquery', 'underscore'],
 		// 	exports: 'Backbone'
@@ -85,8 +68,9 @@ require.
  // The main JS module can still call require/requirejs to set config values,
  // but for loading modules it should use define().
 require(["jquery", "jquery-ui", "angular","app.router"], function() {
-   //angular.module('ezdiyApp', []);
+   angular.module('ezdiyApp', []);
     angular.element(document).ready(function() {
       angular.bootstrap(document, ['ezdiyApp']);
     });
+
 });
