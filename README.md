@@ -1,4 +1,14 @@
-# CodeIgniter with RequireJS and Backbone
+# Codeigniter with RequireJS and Angularjs
+
+This is only a endpoint,Login and Dashboard, Logout
+
+```
+git clone https://github.com/wakasann/codeignitor-requirejs-backbone.git cirequirejs
+```
+
+---
+
+# CodeIgniter with RequireJS and Angularjs
 
 If you need a web app with a strong front-end interaction with access to back-end processing, such as querying an API for JSON data or building an admin dashboard to manage your assets, you can use this repo as a good starting point to hit the ground running.
 

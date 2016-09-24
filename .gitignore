@@ -25,3 +25,10 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.stTheme.cache
 *.sublime-workspace
 *.sublime-project
+
+## gulp files
+node_modules
+node_modules/
+# gulp plugin path
+/dist # build target path
+/user_guide
