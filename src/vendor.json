@@ -1,0 +1,12 @@
+[
+  "bower_components/open-sans-fontface/open-sans.css",
+  "bower_components/open-sans-fontface/fonts/Light/*",
+  "bower_components/open-sans-fontface/fonts/Regular/*",
+  "bower_components/open-sans-fontface/fonts/Italic/*",
+  "bower_components/open-sans-fontface/fonts/Semibold/*",
+  "bower_components/fontawesome/css/font-awesome.min.css",
+  "bower_components/fontawesome/fonts/*",
+  "bower_components/jquery-ui/jquery-ui.min.js",
+  "bower_components/animate.css/animate.min.css",
+  "node_modules/bootstrap-sass/assets/javascripts/*",
+]
