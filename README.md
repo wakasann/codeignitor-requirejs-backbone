@@ -1,4 +1,14 @@
-# CodeIgniter with RequireJS and Backbone
+# Codeigniter with RequireJS and Angularjs
+
+This is only a endpoint,Login and Dashboard, Logout
+
+```
+git clone https://github.com/wakasann/codeignitor-requirejs-backbone.git cirequirejs
+```
+
+---
+
+# CodeIgniter with RequireJS and Angularjs
 
 If you need a web app with a strong front-end interaction with access to back-end processing, such as querying an API for JSON data or building an admin dashboard to manage your assets, you can use this repo as a good starting point to hit the ground running.
 
@@ -55,6 +65,45 @@ NOTE: that moving forward you must use best practices to guard yourself against 
 @see [OWASP](https://www.owasp.org/) for more info about security, and this is a good read about [Testing for AJAX Vulnerabilities](https://www.owasp.org/index.php/Testing_for_AJAX_Vulnerabilities_%28OWASP-AJ-001%29)
 
 Also, @see [CI Input class](http://ellislab.com/codeigniter/user-guide/libraries/input.html) and [CI Security Class](http://ellislab.com/codeigniter/user-guide/libraries/security.html) for built in Global XSS Filtering and Security options.
+
+
+## Css Library
+
+#### base.css
+
+1. YUI 3.18.1
+2. Bootstrap v3.3.5
+3. Uploadify
+4. video-js
+5. Angular Material Design(v1.0.0-rc4)
+6. Animate.css - http://daneden.me/animate
+7. [glide](https://github.com/nickpettit/glide)
+8. [ui-select 0.13.2](http://github.com/angular-ui/ui-select) 
+9. [select2 theme](https://github.com/select2/select2-bootstrap-theme)
+10. [selectize](http://selectize.github.io/selectize.js/)
+11. [Bootstrap theme]
+12. jQuery UI - v1.9.2
+13. [Spectrum Colorpicker v1.5.1](https://github.com/bgrins/spectrum) ,[theme](http://bgrins.github.io/spectrum/themes/)
+14. [css-aspect-ratio](http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio)
+
+
+## Javascript Library
+
+1. Angular
+2. jQuery
+3. jQuery UI
+4. NProgress.js
+
+## Three Javascript Plugin
+1. [Ueditor](http://ueditor.baidu.com/website/)
+
+
+
+## QA
+1. [Scrollable Menu with Bootstrap 3 - Menu expanding](http://stackoverflow.com/a/19229738/5840474)
+
+## Thats it for now - Happy Coding!
+
 
 
 ## Thats it for now - Happy Coding!
